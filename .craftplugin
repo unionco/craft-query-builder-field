@@ -1,0 +1,30 @@
+{
+  "pluginName": "QueryBuilder",
+  "pluginDescription": "Query Field Type for  Craft 3",
+  "pluginVersion": "0.1.0",
+  "pluginAuthorName": "UNION",
+  "pluginVendorName": "unionco",
+  "pluginAuthorUrl": "https://union.co",
+  "pluginAuthorGithub": "",
+  "codeComments": "",
+  "pluginComponents": [
+    "controllers",
+    "fieldtypes",
+    "models",
+    "services",
+    "settings"
+  ],
+  "consolecommandName": "",
+  "controllerName": "QueryController",
+  "cpsectionName": "",
+  "elementName": "",
+  "fieldName": "QueryBuilderField",
+  "modelName": "",
+  "purchasableName": "",
+  "recordName": "",
+  "serviceName": "Query",
+  "taskName": "",
+  "utilityName": "",
+  "widgetName": "",
+  "apiVersion": "api_version_3_0"
+}

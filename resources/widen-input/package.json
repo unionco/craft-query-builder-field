@@ -1,0 +1,43 @@
+{
+  "name": "widen-input",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "webpack --progress --config webpack.config.dev.js",
+    "dev:server": "webpack-dev-server --progress --config webpack.config.dev.js",
+    "prod": "webpack --config webpack.config.prod.js",
+    "lint": "eslint --ext .js,.vue src"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "dayjs": "^1.9.4",
+    "query-string": "^6.13.6",
+    "regenerator-runtime": "^0.13.7",
+    "vue": "^2.6.12",
+    "vue-js-modal": "^2.0.0-rc.6",
+    "vuedraggable": "^2.24.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.3.2",
+    "css-loader": "^5.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "^15.0.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "eslint-plugin-vue": "^7.1.0",
+    "vue-loader": "^15.9.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

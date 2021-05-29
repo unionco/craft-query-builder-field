@@ -1,0 +1,11 @@
+<div id="{{name}}" class="query-builder-field" data-querybuilder-input>
+    Field
+</div>
+
+ {% set scriptTagOptions = {
+        'depends': [
+            'unionco\\querybuilder\\assetbundles\\querybuilder\\QueryBuilderAsset'
+        ],
+    } %}
+    {{ craft.querybuilder.register('/src/js/input.ts', false, scriptTagOptions) }}
+    {# {{ craft.querybuilder.register('/src/js/welcome.ts', false, scriptTagOptions) }} #}

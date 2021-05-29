@@ -1,0 +1,24 @@
+{
+  "src/js/input.ts": {
+    "file": "js/input.js",
+    "src": "src/js/input.ts",
+    "isEntry": true,
+    "imports": [
+      "_vendor.js"
+    ],
+    "css": [
+      "assets/input.f204b006.css"
+    ]
+  },
+  "src/js/settings.ts": {
+    "file": "js/settings.js",
+    "src": "src/js/settings.ts",
+    "isEntry": true,
+    "imports": [
+      "_vendor.js"
+    ]
+  },
+  "_vendor.js": {
+    "file": "js/vendor.js"
+  }
+}

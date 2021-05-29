@@ -1,0 +1,46 @@
+{
+    "name": "unionco/craft-query-builder-field",
+    "description": "QueryBuilder Field Type for  Craft 3",
+    "type": "craft-plugin",
+    "version": "0.1.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "query",
+        "builder"
+    ],
+    "support": {
+        "docs": "https://unionco.github.io/craft-plugin-docs/craft-query-builder-field",
+        "issues": "https://github.com/unionco/craft-query-builder-field/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "UNION",
+            "homepage": "https://union.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0",
+        "nystudio107/craft-plugin-vite": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "unionco\\querybuilder\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "QueryBuilder",
+        "handle": "query-builder-field",
+        "developer": "UNION",
+        "developerUrl": "https://union.co",
+        "documentationUrl": "https://unionco.github.io/craft-plugin-docs/craft-query-builder-field",
+        "changelogUrl": "???",
+        "components": {
+            "queries": "unionco\\querybuilder\\services\\Queries"
+        },
+        "class": "unionco\\querybuilder\\QueryBuilderPlugin"
+    }
+}
