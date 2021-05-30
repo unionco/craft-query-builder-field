@@ -7,10 +7,17 @@ use craft\base\Field;
 use craft\helpers\Json;
 use craft\base\ElementInterface;
 use craft\base\PreviewableFieldInterface;
+use unionco\querybuilder\QueryBuilderPlugin;
 use unionco\querybuilder\assetbundles\querybuilder\QueryBuilderAsset;
 
 class QueryBuilderField extends Field implements PreviewableFieldInterface
 {
+    private $service;
+    public function init()
+    {
+        parent::init();
+        $this->service = QueryBuilderPlugin::$plugin->settings;
+    }
     public static function displayName(): string
     {
         return \Craft::t('app', 'QueryBuilder');
@@ -47,10 +54,15 @@ class QueryBuilderField extends Field implements PreviewableFieldInterface
         $view = \Craft::$app->getView();
         $view->registerAssetBundle(QueryBuilderAsset::class);
 
+        // $categoryGroups = $this->service->getCategoryGroups();
+
         return $view->renderTemplate(
             'query-builder-field/_field/settings',
             [
                 'field' => $this,
+                'categoryGroups' => $this->service->getCategoryGroups(),
+                'channels' => $this->service->getChannels(),
+                'structures' => $this->service->getStructures(),
             ]
         );
     }

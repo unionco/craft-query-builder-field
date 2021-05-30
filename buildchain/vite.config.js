@@ -30,8 +30,8 @@ export default ({ command }) => ({
     }),
     ViteRestart({
       reload: [
-        '**/*.vue',
-        '**/*.ts',
+        '/src/**/*.vue',
+        '/src/**/*.ts',
       ],
     }),
     vue(),

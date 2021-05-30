@@ -6,24 +6,11 @@
     {# {{ craft.querybuilder.register('/src/js/app.ts', false, scriptTagOptions) }} #}
     {{ craft.querybuilder.register('/src/js/settings.ts', false, scriptTagOptions) }}
 
-<div id="{{ field.id }}" data-querybuilder-settings>
+{# {{ dump(categoryGroups) }} #}
+
+<div id="{{ field.id }}" data-querybuilder-settings
+    data-category-groups="{{ categoryGroups|json_encode }}"
+    data-channels="{{ channels|json_encode }}"
+    data-structures="{{ structures|json_encode }}">
+    {# <settings category-groups="{{ categoryGroups|json_encode }}"/> #}
 </div>
-{# {% do view.registerAssetBundle("unionco\\widen\\assetbundles\\widen\\WidenAsset") %}
-
-    {{ forms.autosuggestField({
-        suggestEnvVars: true,
-        label: 'Auth Token',
-        instructions: 'The Widen DAM authentication string. Format: username/token',
-        id: 'authToken',
-        name: 'authToken',
-        value: settings['authToken']})
-    }}
-
-    {{ forms.autosuggestField({
-        suggestEnvVars: true,
-        label: 'Base URL',
-        instructions: 'The Widen DAM Base URL',
-        id: 'baseUrl',
-        name: 'baseUrl',
-        value: settings['baseUrl']})
-    }} #}

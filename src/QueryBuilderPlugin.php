@@ -28,6 +28,7 @@ use craft\events\RegisterTemplateRootsEvent;
 use craft\events\RegisterComponentTypesEvent;
 use unionco\widen\services\Asset as AssetService;
 use unionco\querybuilder\fields\QueryBuilderField;
+use unionco\querybuilder\services\SettingsService;
 use craft\console\Application as ConsoleApplication;
 use nystudio107\pluginvite\services\VitePluginService;
 use unionco\widen\fields\WidenAsset as WidenAssetField;
@@ -86,6 +87,7 @@ class QueryBuilderPlugin extends Plugin
         Craft::setAlias('@querybuilder', $this->getBasePath());
 
         $this->setComponents([
+            'settings' => SettingsService::class,
             'queries' => Queries::class,
             'vite' => [
                 'class' => VitePluginService::class,

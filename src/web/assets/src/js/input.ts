@@ -5,6 +5,7 @@ import '@/css/app.pcss';
 
 console.log('app.ts');
 const main = async () => {
+      console.log('input main');
       // Create our vue instance
       const app = createApp(Input);
       // Mount the app
