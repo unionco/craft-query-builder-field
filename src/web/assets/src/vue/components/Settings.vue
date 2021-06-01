@@ -1,6 +1,9 @@
 <template>
   <div>
     This is Settings {{ JSON.stringify(categoryGoups)}}
+    <Field name="category-groups" instructions="Instructions text">
+      <Dropdown name="category-groups" :options="categoryGroups"/>
+    </Field>
     <ul>
       <li :key="group.handle" v-for="group in categoryGroups">
         {{ group.name }}
@@ -22,6 +25,8 @@
 
 <script lang="ts">
 import { defineComponent, toRefs } from 'vue';
+import Field from './Field.vue';
+import Dropdown from './Dropdown.vue';
 
 export interface Element {
   id: string;
@@ -49,6 +54,10 @@ export default defineComponent({
   //     categoryGroups:
   //   };
   // },
+  components: {
+    Field,
+    Dropdown,
+  },
   setup(props, context) {
     const root = document.querySelector('[data-querybuilder-settings]');
     const categoryGroups = JSON.parse(root.dataset.categoryGroups);
